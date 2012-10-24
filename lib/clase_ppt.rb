@@ -19,8 +19,8 @@ class Ppt
    end 
    def jugar
 
-    puts "Jugada del humano: #{@jugada_j}"
-    puts "Jugada del PC: #{@jugada_m}"
+  #  puts "Jugada del humano: #{@jugada_j}"
+ #   puts "Jugada del PC: #{@jugada_m}"
 
     if (@defeat[@jugada_m] == @jugada_j)
       final = "Pierde"
@@ -35,6 +35,6 @@ class Ppt
       @resultado="pierde"
       @resultados <<'pierde'
    end
-	puts "El jugador -> #{final}"
+#	puts "El jugador -> #{final}"
 end
 end 

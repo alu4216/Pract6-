@@ -35,7 +35,14 @@ describe Ppt do
   end
   it "Invocar metodo jugar" do
     @mano.jugar
-  end 
+  end
+  it "Comprobacion que la jugada de la maquina coje las 3 posibilidades" do
+	score = []
+        40.times do
+        score.push@mano.obtener_maquina
+        end
+        raise "No se han conseguido las 3 posibilidades '#{tiradas.join(',')}"unless score.length >= 3
+  end
 
 end
 

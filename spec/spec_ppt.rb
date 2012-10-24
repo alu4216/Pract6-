@@ -26,6 +26,10 @@ describe Ppt do
 	var=@mano.obtener_maquina 
 	@mano.tiradas.include?var
   end   
+  it "Debe existir una variables que liste los ganadores " do
+
+	defined?@mano.ganadores
+  end 
 end
 
 

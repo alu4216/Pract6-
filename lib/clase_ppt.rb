@@ -4,7 +4,13 @@ class Ppt
   attr_reader :jugada_j, :jugada_m, :tiradas, :defeat
 
    def initialize
-	@jugada_j= :piedra
-	@jugada_m= :tijera  
+	@tiradas = [ :piedra, :papel, :tijeras]
+	@defeat = { :piedra => :tijeras, :papel => :piedra, :tijeras => :papel}
+	@jugada_j= :piedra 
+	@jugada_m= :tijeras
    end 
+   def obtener_humano
+	@jugada_j= @tiradas.sample 
+   end	
+
 end

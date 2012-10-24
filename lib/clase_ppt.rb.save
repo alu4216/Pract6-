@@ -1,0 +1,7 @@
+
+class Ppt
+   def initialize(var)
+
+	@jugada_j= 
+   end 
+end

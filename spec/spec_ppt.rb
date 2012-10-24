@@ -21,7 +21,11 @@ describe Ppt do
   it "Funcion obtener jugada humano" do
 	var=@mano.obtener_humano 
  	@mano.tiradas.include?var
-  end 
+  end
+  it "Funcion obtener jugada maquina" do
+	var=@mano.obtener_maquina 
+	@mano.tiradas.include?var
+  end   
 end
 
 

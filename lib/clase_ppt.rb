@@ -12,5 +12,8 @@ class Ppt
    def obtener_humano
 	@jugada_j= @tiradas.sample 
    end	
+   def obtener_maquina
+	@jugada_m=@tiradas.sample	
+   end 
 
 end

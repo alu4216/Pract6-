@@ -41,11 +41,19 @@ describe Ppt do
         40.times do
         score.push@mano.obtener_maquina
         end
-        raise "No se han conseguido las 3 posibilidades '#{tiradas.join(',')}"unless score.length >= 3
+        raise ScriptError,  "No se han conseguido las 3 posibilidades '#{tiradas.join(',')}"unless score.length >= 3
+  end
+  it "Comprobacion de jugadas maquina-humano no son siempre iguales" do
+    cont=0
+    40.times do
+	if @mano.obtener_humano==@mano.obtener_maquina 
+	cont+=1
+	end
+    end 
+	raise ScriptError, "Las jugadas siempre son iguales" unless cont<40 
   end
 
-end
-
+end 
 
 
 

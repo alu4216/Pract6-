@@ -10,10 +10,14 @@ describe Ppt do
   it "Deberia tener un estado inicial la maquina" do
 	@mano.jugada_m.should== :tijera
   end
-  it "Deberia tener un lista de posibles jugadas" do 
+  it "Deberia tener una lista de posibles jugadas" do 
 	@mano.tiradas = [ :piedra, :papel, :tijeras]
 	@mano.tiradas.should == [ :piedra, :papel, :tijeras]
   end 
+  it "Deberia tener una lista de jugadas con sus ganadores" do
+ 	@mano.defeat =  { :piedra => :tijeras, :papel => :piedra, :tijeras => :papel}
+ 	@mano.defeat.should ==  { :piedra => :tijeras, :papel => :piedra, :tijeras => :papel}
+  end
 
 end
 

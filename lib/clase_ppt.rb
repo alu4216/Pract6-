@@ -31,7 +31,7 @@ class Ppt
       @resultado="empata"
       @resultados<<'empata'
     else
-      final = "Gana"
+      final = "gana"
       @resultado="pierde"
       @resultados <<'pierde'
    end
